@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-// Uncomment this line to use console.log
-// import "hardhat/console.sol";
-
 contract Crowdfunding {
     bool private accomplished = false;
     uint private target;
@@ -17,11 +14,7 @@ contract Crowdfunding {
         uint _target,
         address payable _toAddr
     ) payable {
-        title = _title;
-        description = _description;
-        target = _target;
-        toAddr = _toAddr;
-        accomplished = false;
+        // [5.2.2] ここに実装
     }
 
     // Getters
@@ -41,10 +34,7 @@ contract Crowdfunding {
         return target;
     }
 
-    receive() external payable {}
+    // [5.2.2] ここに実装
 
-    function withdraw() public {
-        require(target <= address(this).balance, "insufficient balance to withdraw");
-		toAddr.transfer(address(this).balance);
-    }
+    // [5.2.3] ここに実装
 }
