@@ -1,21 +1,25 @@
 import { ethers } from "hardhat";
 
 async function main() {
+  const [deployer] = await ethers.getSigners();
+
+  console.log("Deploying contracts with the account:", deployer.address);
+  console.log("Account balance:", (await deployer.getBalance()).toString());
+
   const Crowdfunding = await ethers.getContractFactory("Crowdfunding");
+
+	// ここから修正
   const crowdfunding = await Crowdfunding.deploy(
-    "Test Funds",
-    "Test desc",
-    ethers.utils.parseEther("1"),
-    "0xe38e47c5912efFFDF04537CB1eE8E73CD4C4e5Fd"
+    "Test Funds", // title: タイトル
+    "Test Desc", // description: 説明
+    ethers.utils.parseEther("0.005"), // target: 目標金額
+    "0x..." // toAddr: 回収資金の送金先アドレス
   );
+	// ここまで修正
 
-  await crowdfunding.deployed;
-
-  console.log(`The contract was deployed to ${crowdfunding.address}`);
+  console.log(`The contract was successfully deployed to ${crowdfunding.address}`);
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;

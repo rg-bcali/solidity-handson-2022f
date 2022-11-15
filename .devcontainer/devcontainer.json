@@ -9,7 +9,7 @@
 		"christian-kohler.npm-intellisense",
 		"christian-kohler.path-intellisense",
 		"NomicFoundation.hardhat-solidity"
-	],
+	]
 
 	// Features to add to the dev container. More info: https://containers.dev/implementors/features.
 	// "features": {},
