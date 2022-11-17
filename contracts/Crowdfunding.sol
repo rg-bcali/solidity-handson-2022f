@@ -14,7 +14,7 @@ contract Crowdfunding {
         uint _target,
         address payable _toAddr
     ) payable {
-        // [5.2.2] ここに実装
+        // [5.2.1] ここに実装
     }
 
     // Getters
