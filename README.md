@@ -1,13 +1,8 @@
-# Sample Hardhat Project
+# Solidity ハンズオン
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+2022f の kumo+bcali 合同MTGで実施された時に使用したリポジトリのテンプレートと資料です。
 
-Try running some of the following tasks:
+- スライド: [solidity_tutorial_slides.pdf](/solidity_tutorial_slides.pdf)
+- レジュメ： [solidity_tutorial_resume.pdf](/solidity_tutorial_resume.pdf)
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+vscode の devcontainer 機能に対応しているので、開発環境も vscode を使えば簡単に構築できるはずです。
